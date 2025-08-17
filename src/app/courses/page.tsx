@@ -1,14 +1,12 @@
 'use client';
 
 import { useState } from 'react';
-import Link from 'next/link';
 import { 
   BookOpen, 
   Play, 
   Clock, 
   Star, 
   Users, 
-  Filter,
   Search,
   Grid,
   List

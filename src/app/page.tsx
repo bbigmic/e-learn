@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { BookOpen, Users, Award, Play, ArrowRight, Star } from 'lucide-react';
+import { BookOpen, Users, Award, Play, ArrowRight } from 'lucide-react';
 
 export default function HomePage() {
   return (

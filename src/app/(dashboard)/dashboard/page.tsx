@@ -1,7 +1,6 @@
 'use client';
 
 import { useState } from 'react';
-import Link from 'next/link';
 import { 
   BookOpen, 
   Play, 
@@ -9,8 +8,6 @@ import {
   Clock, 
   TrendingUp, 
   User,
-  LogOut,
-  Settings,
   Bell
 } from 'lucide-react';
 import Card from '@/components/ui/Card';

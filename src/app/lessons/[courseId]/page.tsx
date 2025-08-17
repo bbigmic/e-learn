@@ -5,7 +5,6 @@ import {
   BookOpen, 
   Play, 
   CheckCircle, 
-  Clock, 
   Lock,
   ChevronRight,
   ChevronDown,
@@ -109,7 +108,7 @@ const mockCourse = {
   ]
 };
 
-export default function CourseLessonsPage({ params }: { params: { courseId: string } }) {
+export default function CourseLessonsPage() {
   const [expandedLesson, setExpandedLesson] = useState<string | null>('1');
   const [currentLesson, setCurrentLesson] = useState('3');
 
@@ -128,7 +127,10 @@ export default function CourseLessonsPage({ params }: { params: { courseId: stri
     }
   };
 
-  const getLessonStatus = (lesson: any) => {
+  const getLessonStatus = (lesson: {
+    completed: boolean;
+    locked: boolean;
+  }) => {
     if (lesson.completed) {
       return <CheckCircle className="h-5 w-5 text-green-600" />;
     } else if (lesson.locked) {

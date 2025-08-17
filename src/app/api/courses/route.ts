@@ -14,7 +14,16 @@ export async function GET(request: NextRequest) {
     const skip = (page - 1) * limit;
 
     // Budowanie filtra
-    const where: any = {
+    const where: {
+      published: boolean;
+      category?: string;
+      level?: string;
+      OR?: Array<{
+        title: { contains: string; mode: 'insensitive' };
+      } | {
+        description: { contains: string; mode: 'insensitive' };
+      }>;
+    } = {
       published: true
     };
 
